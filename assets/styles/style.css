@@ -31,6 +31,8 @@ ul {
 p {
     margin-block-start: 1em;
     margin-block-end: 1em;
+    color: #444;
+
 }
 
 html {
@@ -43,16 +45,39 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     margin: 0 auto;
     width: 80%;
     padding-left: 15px;
     padding-right: 15px;
 
 }
+.heading-container{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.special-heading{
+    font-size: 100px;
+    color: #ebeced;
+    font-weight: 800;
+    letter-spacing: -3px;
 
+}
+.heading-container p{
+    color: #797979;
+    font-size: 20px;
+    margin: 0 ;
+    position: absolute;
+    display: flex;
+    bottom: 8%;
+    left: 25%;
+    justify-content: center;
+    width: 53%;
+}
 
 /* End Globals */
 
@@ -62,7 +87,9 @@ nav {
 }
 nav .container{
     position: relative;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logo {
     width: 4rem;
@@ -198,7 +225,11 @@ nav .links ul li {
     padding: var(--section-padding);
     background-color: var(--section-background);
 }
-
+.features .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .feature {
     padding: 20px;
     text-align: center;
@@ -214,3 +245,55 @@ nav .links ul li {
     color: #777;
     font-size: 17px;
 }
+.feature i{
+    color: var(--main-color);
+}
+/* End features */
+/* Start services */
+.services{
+    padding: var(--section-padding);
+}
+.services_content{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px,1fr));
+    margin-top: 100px;
+    grid-gap: 20px;
+}
+.services_content .col .item{
+    display: flex;
+    margin-bottom: 40px;
+}
+.services_content .col  .item .text{
+    flex: 1;
+}
+.services_content .col  .item .text h3{
+    margin: 0 0 20px;
+}
+.services_content .col .item .text p{
+    font-weight: 300;
+    line-height: 1.6;
+
+}
+.services_content .col .item i {
+color: var(--main-color);
+flex-basis: 60px;
+}
+.services_content .col .image{
+    text-align: center;
+    position: relative;
+}
+.services_content .col .image img{
+    width: 260px;
+}
+.services_content .col .image::before{
+    content: '';
+    position: absolute;
+    background-color: var(--secondary-color);
+    right: 0;
+    top: -50px;
+    height: calc(100% + 100px);
+    width: 100px;
+    z-index: -20;
+
+}
+/* End services  */
