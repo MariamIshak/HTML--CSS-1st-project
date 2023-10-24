@@ -74,6 +74,7 @@ body {
     .container {
         width: 100%;
         padding: 0px;
+        margin: 0px;
     }
 
     .special-heading {
@@ -88,12 +89,16 @@ body {
 }
 
 @media (max-width:375px) {
-    *{
+    :root {
+        --section-padding: 10px;
+        
+    }
+    /* .container {
         width: 100%;
-    }
-    img{
-       max-width: 100%;
-    }
+        padding: 0px;
+        margin: 0px;
+    } */
+
 }
 /* End Globals */
 
@@ -335,6 +340,13 @@ nav .links ul li {
 
     }
 }
+@media (max-width:775px) {
+    .services_content .col .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
 
 /* Keyframes */
 @keyframes wiggle {
@@ -488,12 +500,14 @@ nav .links ul li {
 
 @media(max-width: 752px) {
     .about_content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         flex-wrap: wrap;
     }
 
     .about_text {
-
+        padding-top: 20px;
+        align-items: center;
+        text-align: center;
         width: 100%;
     }
 
